@@ -43,7 +43,7 @@ class PushNotification:
             except requests.exceptions.RequestException as e:
                 logger.error("❌ PushPlus推送失败: %s", e)
                 if attempt < attempts - 1:  # 如果不是最后一次尝试
-                    sleep_time = random.randint(180, 360)  # 随机3到6分钟
+                    sleep_time = random.randint(10, 60)  # 随机3到6分钟
                     logger.info("将在 %d 秒后重试...", sleep_time)
                     time.sleep(sleep_time)
 
