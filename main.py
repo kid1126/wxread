@@ -51,6 +51,14 @@ def get_wr_skey():
     return None
 
 
+waittime=random.randint(0, 300)
+logging.info(f"⏱️ 程序启动，等待{waittime}秒...")
+time.sleep(waittime)
+
+if PUSH_METHOD not in (None, ''):
+    logging.info("⏱️ 开始推送...")
+    push(f"🎉 微信读书开始自动阅读！\n⏱️ 计划阅读时长：{READ_NUM*0.5}分钟。", PUSH_METHOD)
+
 index = 1
 readtime=0
 while index <= READ_NUM:
