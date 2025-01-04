@@ -57,7 +57,7 @@ time.sleep(waittime)
 
 if PUSH_METHOD not in (None, ''):
     logging.info("⏱️ 开始推送...")
-    push(f"🎉 微信读书开始自动阅读！\n⏱️ 计划阅读时长：{READ_NUM*0.5}分钟。", PUSH_METHOD)
+    push(f"🎉 微信读书开始自动阅读{READ_NUM*0.5}分钟！", PUSH_METHOD)
 
 index = 1
 readtime=0
@@ -97,4 +97,4 @@ logging.info("🎉 阅读脚本已完成！")
 
 if PUSH_METHOD not in (None, ''):
     logging.info("⏱️ 开始推送...")
-    push(f"🎉 微信读书自动阅读完成！\n⏱️ 阅读时长：{readtime/60:.1f}分钟。", PUSH_METHOD)
+    push(f"🎉 微信读书自动阅读{readtime/60:.1f}分钟完成！", PUSH_METHOD)
