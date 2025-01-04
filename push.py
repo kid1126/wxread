@@ -35,7 +35,7 @@ class PushNotification:
                         "content": content
                     }).encode('utf-8'),
                     headers=self.headers,
-                    timeout=10
+                    timeout=30
                 )
                 response.raise_for_status()
                 logger.info("✅ PushPlus响应: %s", response.text)
