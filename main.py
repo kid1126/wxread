@@ -51,7 +51,7 @@ def get_wr_skey():
     return None
 
 
-waittime=random.randint(0, 300)
+waittime=random.randint(0, 3)
 logging.info(f"⏱️ 程序启动，等待{waittime}秒...")
 time.sleep(waittime)
 
